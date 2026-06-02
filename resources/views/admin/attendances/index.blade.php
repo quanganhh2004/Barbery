@@ -1,6 +1,6 @@
-@extends('voyager::master')
+@extends('voyager::master') {{-- kế thừa layout voyager --}}
 
-@section('page_title', 'Chấm công')
+@section('page_title', 'Chấm công') {{-- tiêu đề --}}
 
 @section('content')
     <div class="page-content container-fluid">
@@ -8,6 +8,7 @@
             <i class="voyager-calendar"></i> Chấm công nhân viên
         </h1>
 
+        {{-- hiển thị thông báo thành công --}}
         @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}

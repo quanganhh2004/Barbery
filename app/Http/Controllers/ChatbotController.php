@@ -103,7 +103,7 @@ class ChatbotController extends Controller
                 return 'Bạn có thể vào trang Tra cứu lịch để kiểm tra lại lịch hẹn của mình.';
 
             case 'cancel_change':
-                return 'Bạn có thể hủy hoặc thay đổi lịch hẹn bằng cách liên hệ với chúng tôi qua hotline hoặc trực tiếp tại trang Đặt lịch.';
+                return 'Nếu muốn hủy hoặc thay đổi lịch hẹn, bạn vui lòng liên hệ salon qua hotline để nhân viên kiểm tra và hỗ trợ cập nhật lịch.';
 
             case 'hairstyle_ai':
                 return 'Để nhận gợi ý kiểu tóc, bạn có thể tải ảnh khuôn mặt rõ nét lên hệ thống. Hệ thống AI sẽ phân tích và gợi ý kiểu tóc phù hợp.';

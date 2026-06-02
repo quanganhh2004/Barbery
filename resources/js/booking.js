@@ -251,8 +251,10 @@ window.resetBooking = function () {
         time: null,
     };
 
+    //set lại danh sách giờ
     availableTimes = new Set();
 
+    //ẩn các bước
     document.querySelectorAll(".booking-step").forEach((s) => {
         s.classList.add("hidden");
     });
@@ -260,11 +262,13 @@ window.resetBooking = function () {
     $("booking-step-1")?.classList.remove("hidden");
     $("booking-success")?.classList.add("hidden");
 
+    //xóa thông tin khách
     ["customer-name", "customer-phone", "customer-email", "customer-notes"].forEach((id) => {
         const input = $(id);
         if (input) input.value = "";
     });
 
+    //chưa chọn dịch vụ lên 3 nút tiếp tục bị khóa
     const btnStep1 = $("btn-step1-next");
     if (btnStep1) btnStep1.disabled = true;
 
@@ -280,13 +284,13 @@ window.resetBooking = function () {
     updateStepIndicators();
     updateSummary();
 };
-// =========================================================
-// RENDER SERVICES
-// =========================================================
+
+//Hiện danh sách ra booking
 function renderServices() {
     const c = $("service-list");
     if (!c) return;
 
+    //lấy danh sách dịch vụ đang được chọn
     const selectedSet = new Set((bookingData.services || []).map((x) => String(x.id)));
 
     c.innerHTML = services.map((s) => {

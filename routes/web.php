@@ -67,8 +67,6 @@ Route::prefix('api')->group(function () {
     Route::get('/services', [CatalogApiController::class, 'services'])->name('api.services');
     //danh sách thợ
     Route::get('/stylists', [CatalogApiController::class, 'stylists'])->name('api.stylists');
-    //khung giờ đã có ngươì đặt
-    Route::get('/booked-slots', [BookingController::class, 'bookedSlots'])->name('api.bookings.bookedSlots');
     //tạo lịch đặt mới
     Route::post('/bookings', [BookingController::class, 'store'])->name('api.bookings.store');
     //tra cứu lich
